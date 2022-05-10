@@ -21,5 +21,5 @@ jobs:
         OSS_KEY: ${{ secrets.OSS_KEY }}
         MIXEWAY_KEY: ${{ secrets.MIXEWAY_KEY }}
       run: |
-       docker run -e OSS_USERNAME=kubixwol@gmail.com -e OSS_KEY=$OSS_KEY -e "MIXEWAY_URL=https://hub.mixeway.io" -e MIXEWAY_KEY=$MIXEWAY_KEY -e MIXEWAY_PROJECT_ID=0 -e MODE=STANDALONE -e MIXEWAY_PROJECT_NAME=123kubix123_lab_secure_app -e COMMIT_ID=test -e BRANCH=master -v /opt/lab_sec_audit/sast:/opt/sources mixeway/scanner:latest
+       docker run -e OSS_USERNAME=kubixwol@gmail.com -e OSS_KEY=$OSS_KEY -e MIXEWAY_URL=https://hub.mixeway.io -e MIXEWAY_KEY=$MIXEWAY_KEY -e MIXEWAY_PROJECT_ID=0 -e MODE=STANDALONE -e MIXEWAY_PROJECT_NAME=123kubix123_lab_secure_app -e COMMIT_ID=test -e BRANCH=master -v ./:/opt/sources mixeway/scanner:latest
 
