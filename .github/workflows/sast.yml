@@ -3,6 +3,7 @@ jobs:
   mixeway-scan:
    name: Mixeway Scanning
    runs-on: ubuntu-latest
+   on: push
    steps:
     - uses: actions/checkout@v1
     - name: Prepare variables
